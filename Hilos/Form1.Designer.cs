@@ -32,24 +32,24 @@
             label2 = new Label();
             label3 = new Label();
             groupBox1 = new GroupBox();
-            dataGridView3 = new DataGridView();
+            dataGridViewNumeros = new DataGridView();
             groupBox2 = new GroupBox();
-            dataGridView2 = new DataGridView();
+            dataGridViewImpares = new DataGridView();
             groupBox3 = new GroupBox();
-            dataGridView1 = new DataGridView();
+            dataGridViewPares = new DataGridView();
             groupBox4 = new GroupBox();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            btnSalir = new Button();
+            btnLimpiar = new Button();
+            btnEjecutar = new Button();
+            txtTipo = new TextBox();
+            txtNumero = new TextBox();
+            txtNumeroHilo = new TextBox();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewNumeros).BeginInit();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewImpares).BeginInit();
             groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPares).BeginInit();
             groupBox4.SuspendLayout();
             SuspendLayout();
             // 
@@ -82,7 +82,7 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(dataGridView3);
+            groupBox1.Controls.Add(dataGridViewNumeros);
             groupBox1.Location = new Point(12, 81);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(133, 318);
@@ -90,18 +90,18 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Enteros";
             // 
-            // dataGridView3
+            // dataGridViewNumeros
             // 
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Location = new Point(6, 22);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.RowTemplate.Height = 25;
-            dataGridView3.Size = new Size(121, 290);
-            dataGridView3.TabIndex = 2;
+            dataGridViewNumeros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewNumeros.Location = new Point(6, 22);
+            dataGridViewNumeros.Name = "dataGridViewNumeros";
+            dataGridViewNumeros.RowTemplate.Height = 25;
+            dataGridViewNumeros.Size = new Size(121, 290);
+            dataGridViewNumeros.TabIndex = 2;
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(dataGridView2);
+            groupBox2.Controls.Add(dataGridViewImpares);
             groupBox2.Location = new Point(151, 81);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(133, 318);
@@ -109,18 +109,18 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Impares";
             // 
-            // dataGridView2
+            // dataGridViewImpares
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(6, 22);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(121, 290);
-            dataGridView2.TabIndex = 1;
+            dataGridViewImpares.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewImpares.Location = new Point(6, 22);
+            dataGridViewImpares.Name = "dataGridViewImpares";
+            dataGridViewImpares.RowTemplate.Height = 25;
+            dataGridViewImpares.Size = new Size(121, 290);
+            dataGridViewImpares.TabIndex = 1;
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(dataGridView1);
+            groupBox3.Controls.Add(dataGridViewPares);
             groupBox3.Location = new Point(290, 81);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(133, 318);
@@ -128,20 +128,20 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Pares";
             // 
-            // dataGridView1
+            // dataGridViewPares
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(6, 22);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(121, 290);
-            dataGridView1.TabIndex = 0;
+            dataGridViewPares.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewPares.Location = new Point(6, 22);
+            dataGridViewPares.Name = "dataGridViewPares";
+            dataGridViewPares.RowTemplate.Height = 25;
+            dataGridViewPares.Size = new Size(121, 290);
+            dataGridViewPares.TabIndex = 0;
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(button3);
-            groupBox4.Controls.Add(button2);
-            groupBox4.Controls.Add(button1);
+            groupBox4.Controls.Add(btnSalir);
+            groupBox4.Controls.Add(btnLimpiar);
+            groupBox4.Controls.Add(btnEjecutar);
             groupBox4.Location = new Point(12, 27);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(405, 48);
@@ -149,62 +149,63 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Acciones";
             // 
-            // button3
+            // btnSalir
             // 
-            button3.Location = new Point(168, 19);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 2;
-            button3.Text = "Salir";
-            button3.UseVisualStyleBackColor = true;
+            btnSalir.Location = new Point(168, 19);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(75, 23);
+            btnSalir.TabIndex = 2;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnLimpiar
             // 
-            button2.Location = new Point(87, 19);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "Limpiar";
-            button2.UseVisualStyleBackColor = true;
+            btnLimpiar.Location = new Point(87, 19);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(75, 23);
+            btnLimpiar.TabIndex = 1;
+            btnLimpiar.Text = "Limpiar";
+            btnLimpiar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnEjecutar
             // 
-            button1.Location = new Point(6, 19);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "Ejecutar";
-            button1.UseVisualStyleBackColor = true;
+            btnEjecutar.Location = new Point(6, 19);
+            btnEjecutar.Name = "btnEjecutar";
+            btnEjecutar.Size = new Size(75, 23);
+            btnEjecutar.TabIndex = 0;
+            btnEjecutar.Text = "Ejecutar";
+            btnEjecutar.UseVisualStyleBackColor = true;
+            btnEjecutar.Click += btnEjecutar_Click;
             // 
-            // textBox1
+            // txtTipo
             // 
-            textBox1.Location = new Point(229, 6);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(112, 23);
-            textBox1.TabIndex = 7;
+            txtTipo.Location = new Point(229, 6);
+            txtTipo.Name = "txtTipo";
+            txtTipo.Size = new Size(112, 23);
+            txtTipo.TabIndex = 7;
             // 
-            // textBox2
+            // txtNumero
             // 
-            textBox2.Location = new Point(134, 6);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(53, 23);
-            textBox2.TabIndex = 8;
+            txtNumero.Location = new Point(134, 6);
+            txtNumero.Name = "txtNumero";
+            txtNumero.Size = new Size(53, 23);
+            txtNumero.TabIndex = 8;
             // 
-            // textBox3
+            // txtNumeroHilo
             // 
-            textBox3.Location = new Point(382, 6);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(35, 23);
-            textBox3.TabIndex = 9;
+            txtNumeroHilo.Location = new Point(382, 6);
+            txtNumeroHilo.Name = "txtNumeroHilo";
+            txtNumeroHilo.Size = new Size(35, 23);
+            txtNumeroHilo.TabIndex = 9;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(427, 411);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtNumeroHilo);
+            Controls.Add(txtNumero);
+            Controls.Add(txtTipo);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
@@ -219,11 +220,11 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Manejo Hilos";
             groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewNumeros).EndInit();
             groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewImpares).EndInit();
             groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPares).EndInit();
             groupBox4.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -235,17 +236,17 @@
         private Label label2;
         private Label label3;
         private GroupBox groupBox1;
-        private DataGridView dataGridView3;
+        private DataGridView dataGridViewNumeros;
         private GroupBox groupBox2;
-        private DataGridView dataGridView2;
+        private DataGridView dataGridViewImpares;
         private GroupBox groupBox3;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewPares;
         private GroupBox groupBox4;
-        private Button button3;
-        private Button button2;
-        private Button button1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private Button btnSalir;
+        private Button btnLimpiar;
+        private Button btnEjecutar;
+        private TextBox txtTipo;
+        private TextBox txtNumero;
+        private TextBox txtNumeroHilo;
     }
 }
