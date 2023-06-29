@@ -62,13 +62,29 @@ namespace Hilos
                     {
                         txtTipo.Text = "Par";
                         // Calcular Potencia
-                        ListaPares.Add(Potencia(NumeroAEvaluar));
+
+                        // Declaraci[on de hilo
+                        Thread threadPar = new Thread(new ThreadStart(() => {
+                            lock (this)
+                            {
+                                ListaPares.Add(Potencia(NumeroAEvaluar));
+                            }
+                        }));
+                        threadPar.Start();
                     }
                     else
                     {
                         txtTipo.Text = "Impar";
                         // Calcular Factorial
-                        ListaImpares.Add(Factorial(NumeroAEvaluar));
+
+                        // Declaraci[on de hilo
+                        Thread threadImpar = new Thread(new ThreadStart(() => {
+                            lock (this)
+                            {
+                                ListaImpares.Add(Factorial(NumeroAEvaluar));
+                            }
+                        }));
+                       threadImpar.Start();
                     }
                 }
             }
