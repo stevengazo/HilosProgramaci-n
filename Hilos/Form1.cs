@@ -1,6 +1,3 @@
-using System;
-using System.Diagnostics;
-
 namespace Hilos
 {
     public partial class Form1 : Form
@@ -64,7 +61,8 @@ namespace Hilos
                         // Calcular Potencia
 
                         // Declaraci[on de hilo
-                        Thread threadPar = new Thread(new ThreadStart(() => {
+                        Thread threadPar = new Thread(new ThreadStart(() =>
+                        {
                             lock (this)
                             {
                                 ListaPares.Add(Potencia(NumeroAEvaluar));
@@ -78,13 +76,14 @@ namespace Hilos
                         // Calcular Factorial
 
                         // Declaraci[on de hilo
-                        Thread threadImpar = new Thread(new ThreadStart(() => {
+                        Thread threadImpar = new Thread(new ThreadStart(() =>
+                        {
                             lock (this)
                             {
                                 ListaImpares.Add(Factorial(NumeroAEvaluar));
                             }
                         }));
-                       threadImpar.Start();
+                        threadImpar.Start();
                     }
                 }
             }
@@ -110,7 +109,7 @@ namespace Hilos
         private void CargaGridViewsImpar()
         {
             dataGridViewImpares.Columns.Add("colPares", "Impares");
-            foreach (var item in ListaImpares )
+            foreach (var item in ListaImpares)
             {
                 dataGridViewImpares.Rows.Add(item.ToString());
             }

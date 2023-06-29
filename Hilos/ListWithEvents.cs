@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml.Linq;
-
-namespace Hilos
+﻿namespace Hilos
 {
     public class ListWithEvents<T> : List<T>
     {
@@ -36,6 +26,6 @@ namespace Hilos
             Item = item;
         }
     }
-  
+
 
 }
